@@ -1,0 +1,116 @@
+h1{
+    color:aqua
+}
+/* Minimalist & Cool Style */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: #f7f7f9;
+    color: #222;
+    min-height: 100vh;
+}
+
+header, footer {
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+    padding: 2rem 1.5rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    margin-top: 0;
+    color: #1a1a1a;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+button, input[type="submit"] {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5em;
+}
+button:hover, input[type="submit"]:hover {
+    background: #1e40af;
+}
+
+input, textarea, select {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.5em 0.8em;
+    font-size: 1em;
+    margin-bottom: 1em;
+    background: #fafbfc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.03);
+}
+th, td {
+    padding: 0.8em 1em;
+    border-bottom: 1px solid #ececec;
+    text-align: left;
+}
+th {
+    background: #f3f4f6;
+    font-weight: 600;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+
+.card {
+    background: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.03);
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.center {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1rem 0.5rem;
+    }
+    table, th, td {
+        font-size: 0.95em;
+    }
+}
