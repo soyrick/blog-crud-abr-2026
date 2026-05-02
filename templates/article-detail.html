@@ -6,4 +6,5 @@
     <p>Autor: {{ article.author }}</p>
     <p>Fecha de publicación: {{ article.created_at }}</p>
     <p>Contenido: {{ article.content }}</p>
+    <a href="{% url 'article-update' article.pk %}">Editar</a>
 {% endblock content %}
