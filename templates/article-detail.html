@@ -6,6 +6,9 @@
     <p>Autor: {{ article.author }}</p>
     <p>Fecha de publicación: {{ article.created_at }}</p>
     <p>Contenido: {{ article.content }}</p>
+    <!--botones de edicion y eliminacion solo si el usuario es el autor y esta autenticado-->
+    {% if user.is_authenticated and user.username == article.author %}
     <a href="{% url 'article-update' article.pk %}">Editar</a>|
     <a href="{% url 'article-delete' article.pk %}">Eliminar</a>
+    {% endif %}
 {% endblock content %}
