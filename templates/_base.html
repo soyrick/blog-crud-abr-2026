@@ -9,15 +9,19 @@
 </head>
 <body>
     <header>
-        <h1><a href="{% url 'article-list' %}">Newspaper Lecheria</a></h1>\
-        <a href="{% url 'article-create' %}">Crear nuevo articulo</a>
+        <h1><a href="{% url 'article-list' %}">Newspaper Lecheria</a></h1>
         {% if user.is_authenticated %}
             <span>Bienvenido, {{ user.username }}!</span>
-            <a href="{% url 'logout' %}">Cerrar sesión</a>
+            <!--logout--> 
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Cerrar sesión</button>
+        </form>
         {% else %}
             <a href="{% url 'login' %}">Iniciar sesión</a>
         {% endif %}
     </header>
+    <h1><a href="{% url 'article-create' %}">Crear nuevo articulo</a></h1>
     {% block content %}
     
     {% endblock content %}
