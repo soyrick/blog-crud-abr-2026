@@ -1,0 +1,12 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <h2>¿Estás seguro de que deseas eliminar este artículo?</h2>
+    <p>Título: {{ article.title }}</p>
+    <p>Autor: {{ article.author }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Eliminar</button>
+        <a href="{% url 'article-detail' article.pk %}">Cancelar</a>
+    </form>
+{% endblock content %}
